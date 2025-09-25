@@ -16,7 +16,7 @@
     </div>
 
     <div class="input-area">
-      <input type="text" id="user-input" placeholder="Digite sua mensagem...">
+      <input type="text" id="user-input" placeholder="Digite sua mensagem..." onkeypress="sendwithEnter(event)">
       <button onclick="sendMessage()">Enviar</button>
       <button class="clear-btn" onclick="clearChat()">Limpar</button>
     </div>

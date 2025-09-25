@@ -3,8 +3,7 @@ const responses = {
   "curso": ["Este curso é de ADS 😃", "Estamos aprendendo Chatbots com JS!"],
   "adeus": ["Tchau! Até logo!", "Foi bom conversar com você, volte sempre."],
   "tudo bem": ["Tudo ótimo, e você?", "Estou bem, obrigado por perguntar!"],
-  "obrigado": ["De nada!", "Por nada! Estou aqui para ajudar."],
-  "brunno": ["Brunno é um buxa professor! 👨‍🏫", "Adoro as aulas do Brunno!"]
+  "obrigado": ["De nada!", "Por nada! Estou aqui para ajudar."]
 };
 
 let userName = null; // memória do nome do usuário
@@ -97,4 +96,10 @@ function clearChat() {
   if (!hasUserMessage) return; // não limpa se não houver mensagem do usuário
   chatBox.innerHTML = '<div class="bot-message">Chat limpo! 👋 Vamos recomeçar: olá!</div>';
   userName = null; // reseta memória
+}
+
+function sendwithEnter(event) {
+  if (event.key === "Enter") {
+    sendMessage();
+  }
 }
